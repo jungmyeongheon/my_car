@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Type of Car - List of all types
+{% endblock %}
+
+
+{% block content %}
+
+  <p><a href="/">HOME</a></p>
+
+  <h1>Types</h1>
+  
+  <ul>
+    {% for x in mytypes %}
+      <li><a href="details/{{ x.id }}">{{ x.item }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
